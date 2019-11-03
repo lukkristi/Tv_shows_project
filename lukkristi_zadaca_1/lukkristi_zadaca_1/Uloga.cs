@@ -15,5 +15,6 @@ namespace lukkristi_zadaca_1
             this.ID = id;
             this.Opis_Uloge = opis_uloge;
         }
+        public Uloga() { }
     }
 }

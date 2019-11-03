@@ -14,5 +14,9 @@ namespace lukkristi_zadaca_1
             this.ID = id;
             this.ImePrezime = imePrezime;
         }
+        public Osoba()
+        {
+
+        }
     }
 }
