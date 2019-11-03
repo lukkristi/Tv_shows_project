@@ -26,6 +26,11 @@ namespace lukkristi_zadaca_1
             return osobe;
         }
 
+        internal override List<Tv_program> UrediPodatkeZaPrograme(string[] datoteka)
+        {
+            throw new NotImplementedException();
+        }
+
         internal override List<Uloga> UrediPodatkeZaUloge(string[] datoteka)
         {
             throw new NotImplementedException();

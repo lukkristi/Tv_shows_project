@@ -11,6 +11,10 @@ namespace lukkristi_zadaca_1
         public int Trajanje { get; set; }
         public List<Osoba_uloga> Uloge { get; set; }
 
+        public Emisija()
+        {
+
+        }
         public Emisija(int id, string naziv, int trajanje )
         {
             this.ID = id;

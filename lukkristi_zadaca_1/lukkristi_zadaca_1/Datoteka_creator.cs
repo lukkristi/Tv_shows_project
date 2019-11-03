@@ -16,19 +16,22 @@ namespace lukkristi_zadaca_1
         {
             if (File.Exists(putanja))
             {
-                string[] datoteka = File.ReadAllLines(putanja + "DZ_1_uloge.txt").Skip(1).Distinct().ToArray();
+                string[] datoteka = File.ReadAllLines(putanja).Skip(1).Distinct().ToArray();
                 if (putanja.Contains("emisije"))
                     Emisije = UrediPodatkeZaEmisije(datoteka);
                 else if (putanja.Contains("osobe"))
                     Osobe = UrediPodatkeZaOsobe(datoteka);
                 else if (putanja.Contains("uloge"))
                     Uloge = UrediPodatkeZaUloge(datoteka);
+                else if (putanja.Contains("tvkuca"))
+                    Programi = UrediPodatkeZaPrograme(datoteka);
 
             }
             Console.WriteLine( "DATOTEKA NE POSTOJI!");
             return;
         }
 
+        internal abstract List<Tv_program> UrediPodatkeZaPrograme(string[] datoteka);
         internal abstract List<Osoba> UrediPodatkeZaOsobe(string[] datoteka);
         internal abstract List<Uloga> UrediPodatkeZaUloge(string[] datoteka);
         internal abstract List<Emisija> UrediPodatkeZaEmisije(string[] datoteka);
